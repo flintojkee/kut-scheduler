@@ -1,6 +1,5 @@
 <div class="login">
   <h2 class="login__header">Sign in</h2>
-  <div class="g-signin2" data-onsuccess="onSignIn"></div>
   <!-- <p class="login__subheader">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
     labore.
@@ -23,12 +22,12 @@
         >Forgot password</a
       >
     </div>
-  </form>
+  </form>-->
   <div class="login__buttons-wrapper">
-    <phb-button (clicked)="onSubmit()" [type]="'default'" [color]="'primary'">Sign in</phb-button>
+    <phb-button (clicked)="signInWithGoogle()" [type]="'default'" [color]="'primary'">Sign in</phb-button>
   </div>
-  <p class="login__signup-question">
+  <!-- <p class="login__signup-question">
     Don`t have an account?
     <a class="link link--primary" [routerLink]="['/auth/signup']" routerLinkActive="router-link-active">Sign up</a>
-  </p> -->
+  </p>  -->
 </div>

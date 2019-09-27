@@ -5,12 +5,13 @@ import { UserRegister } from '@root/app/shared/models';
 import { LoginService } from '@root/app/auth/shared/login.service';
 
 @Component({
-  selector: 'phb-signup',
+  selector: 'kut-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss', '../../shared/styles/auth-pages.scss']
 })
 export class SignupComponent implements OnInit {
   signupForm: FormGroup;
+  isFormConfirmed: boolean;
   constructor(private authService: AuthService, private loginService: LoginService) {}
 
   ngOnInit() {
