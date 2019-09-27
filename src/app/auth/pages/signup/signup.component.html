@@ -1,0 +1,54 @@
+<div class="signup">
+  <div *ngIf="!isFormConfirmed; confirmEmail">
+    <h2>Sign up</h2>
+    <p class="signup__subheader">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore.
+    </p>
+    <form [formGroup]="signupForm">
+      <div class="signup__input-wrapper">
+        <div class="signup__input">
+          <phb-input [control]="fullName" label="Full name:"></phb-input>
+        </div>
+        <div class="signup__input">
+          <phb-input [control]="email" label="Email Address:"></phb-input>
+        </div>
+        <div class="signup__input">
+          <phb-input [control]="password" label="Password:" type="password"></phb-input>
+        </div>
+        <div class="signup__input">
+          <phb-input
+            [control]="retypedPassword"
+            label="Retype password:"
+            type="password"
+          ></phb-input>
+        </div>
+      </div>
+      <div class="signup__utils-wrapper fw">
+        <phb-checkbox [control]="terms" round="true"
+          >I Agree with
+          <a [routerLink]="['/terms']" routerLinkActive="router-link-active"
+            ><strong>Terms of Use</strong></a
+          ></phb-checkbox
+        >
+      </div>
+      <div class="signup__buttons-wrapper">
+        <phb-button (clicked)="onSubmit()" [type]="'default'" [color]="'primary'"
+          >Sign up</phb-button
+        >
+      </div>
+    </form>
+    <p class="signup__signup-question">
+      Already have an account?
+      <a
+        class="link link--primary"
+        [routerLink]="['/auth/login']"
+        routerLinkActive="router-link-active"
+        >Sign in</a
+      >
+    </p>
+  </div>
+  <ng-template #confirmEmail>
+    Email sent! Check your inbox for an email from us with a “Confirm Account” link.
+  </ng-template>
+</div>

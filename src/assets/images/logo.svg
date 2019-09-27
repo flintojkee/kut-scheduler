@@ -1,0 +1,8 @@
+  <svg width="380px" height="434px" viewBox="0 0 380 434" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo_KUT" fill-rule="nonzero">
+            <path d="M379.61,328.83 L375.21,328.83 C305.63,328.83 236.05,328.86 166.47,328.92 C163.69,328.92 162.05,328.32 160.53,325.67 C134.716667,280.476667 108.773333,235.343333 82.7,190.27 C81.4006028,188.444261 81.4006028,185.995739 82.7,184.17 C117.44,123.723333 152.116667,63.2566667 186.73,2.77 C187.23,1.91 187.81,1.09 188.51,0 L379.61,328.83 Z" id="Path" fill="#972424"></path>
+            <polygon id="Path" fill="#972424" points="0 328.65 69 208.31 138.77 328.65"></polygon>
+        </g>
+    </g>
+  </svg>
