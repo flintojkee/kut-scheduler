@@ -1,16 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { first } from 'rxjs/operators';
 import { LoginService } from '@root/app/auth/shared/login.service';
-import { UserLoginCheck } from '@root/app/shared/models';
-import { AuthService } from 'angularx-social-login';
 import { SocialUser } from 'angularx-social-login';
-import {
-  GoogleLoginProvider,
-  FacebookLoginProvider,
-  LinkedInLoginProvider
-} from 'angularx-social-login';
 
 @Component({
   selector: 'kut-login',
@@ -25,22 +17,16 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private loginService: LoginService,
-    private googleAuthService: AuthService
   ) {}
 
   ngOnInit() {
-    this.googleAuthService.authState.subscribe((user) => {
-      this.user = user;
-      console.log(user);
-    });
+
   }
 
   signInWithGoogle(): void {
-    this.googleAuthService.signIn(GoogleLoginProvider.PROVIDER_ID);
   }
 
   signOut(): void {
-    this.googleAuthService.signOut();
   }
 
   createForm() {
